@@ -8,6 +8,7 @@ const PORT = 3121;
 const REVIEWS = 'http://localhost:3002/';
 const CART = 'http://localhost:3001/';
 const CAROUSEL = 'http://localhost:3003/';
+const DETAILS = 'http://localhost:3004/';
 const RECOMMENDED = 'http://localhost:3005/';
 
 app.listen(PORT, () => { console.log(`Now listening on port ${PORT}`); });
@@ -80,6 +81,26 @@ app.all('/recommended/', jsonParser, (req, res) => {
   axios({
     method: METHOD,
     url: `${RECOMMENDED}recommended/`,
+    data: JSON.stringify(BODY),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => {
+      res.status(200).send(response.data);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send('Something went wrong!');
+    });
+});
+
+app.all('/api/games/:gameId', jsonParser, (req, res) => {
+  const METHOD = req.method;
+  const BODY = req.body;
+  axios({
+    method: METHOD,
+    url: `${DETAILS}api/games/${req.params.gameId}`,
     data: JSON.stringify(BODY),
     headers: {
       'Content-Type': 'application/json',

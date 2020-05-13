@@ -1,38 +1,46 @@
 #container {
-  max-width: 1280;
   margin: auto;
+  display: grid;
+  grid-template-areas:
+    "top"
+    "details"
+    "recommended"
+    "reviews";
+}
+
+#top{
+  grid-area: top;
+  max-width: 1280;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-areas:
-    "carousel addtocart"
-    "details details"
-    "recommended recommended"
-    "reviews reviews";
+  "carousel addtocart";
+  margin: auto;
+  margin-bottom: 30px;
 }
 
 #carousel {
-  display: block;
+  max-width: 600px;
+  justify-self: end;
   grid-area: carousel;
 }
 
 #addToCart {
-  display: block;
+  max-width: 450px;
+  justify-self: start;
   grid-area: addtocart;
 }
 
-#details {
-  display: block;
+#game-details {
+  background-color: #f2f4f7;
   grid-area: details;
-  height: 300px;
-  background-color: #decbe4;
 }
 
 #recommended {
-  display: block;
+  background-color: #f2f4f7;
   grid-area: recommended;
 }
 
 #reviews {
-  display: block;
   grid-area: reviews;
 }
