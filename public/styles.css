@@ -1,0 +1,38 @@
+#container {
+  max-width: 1280;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+    "carousel addtocart"
+    "details details"
+    "recommended recommended"
+    "reviews reviews";
+}
+
+#carousel {
+  display: block;
+  grid-area: carousel;
+}
+
+#addToCart {
+  display: block;
+  grid-area: addtocart;
+}
+
+#details {
+  display: block;
+  grid-area: details;
+  height: 300px;
+  background-color: #decbe4;
+}
+
+#recommended {
+  display: block;
+  grid-area: recommended;
+}
+
+#reviews {
+  display: block;
+  grid-area: reviews;
+}
