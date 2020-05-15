@@ -2,6 +2,8 @@
   margin: auto;
   display: grid;
   grid-template-areas:
+    "title"
+    "bar"
     "top"
     "details"
     "recommended"
@@ -43,4 +45,38 @@
 
 #reviews {
   grid-area: reviews;
+}
+
+#mainTitle {
+  grid-area: title;
+  text-align: center;
+  font-weight: 900!important;
+  font-family: Montserrat,sans-serif;
+  font-size: 80px;
+  margin: 0%;
+}
+
+#red {
+  color: #DA3625;
+}
+
+#selectionBar{
+  font-family: Montserrat,sans-serif;
+  grid-area: bar;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto repeat(8, 10%) auto;
+  border-bottom: 2px solid #dbdbdb;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0,
+  0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+}
+
+.mid {
+  align-self: center;
+  justify-self: center;
+}
+
+.mid:hover {
+  color: #DA3625;
 }
