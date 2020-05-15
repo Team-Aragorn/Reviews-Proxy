@@ -13,8 +13,8 @@ const CART = 'http://localhost:3001/';
 const CAROUSEL = 'http://localhost:3003/';
 const DETAILS = 'http://54.69.127.206:3004/';
 //const DETAILS = 'http://localhost:3004/';
-//const RECOMMENDED = '';
-const RECOMMENDED = 'http://localhost:3005/';
+const RECOMMENDED = 'http://3.18.37.38:3005/';
+//const RECOMMENDED = 'http://localhost:3005/';
 
 app.listen(PORT, () => { console.log(`Now listening on port ${PORT}`); });
 
