@@ -11,8 +11,8 @@ const REVIEWS = 'http://3.22.26.129/';
 const CART = 'http://localhost:3001/';
 //const CAROUSEL = '';
 const CAROUSEL = 'http://localhost:3003/';
-//const DETAILS = '';
-const DETAILS = 'http://localhost:3004/';
+const DETAILS = 'http://54.69.127.206:3004/';
+//const DETAILS = 'http://localhost:3004/';
 //const RECOMMENDED = '';
 const RECOMMENDED = 'http://localhost:3005/';
 
