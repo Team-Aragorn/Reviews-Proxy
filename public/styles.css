@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 #container {
   margin: auto;
   display: grid;
@@ -10,15 +14,32 @@
     "reviews";
 }
 
+
 #top{
   grid-area: top;
   max-width: 1280;
   display: grid;
-  grid-template-columns: 3fr 2fr;
   grid-template-areas:
-  "carousel addtocart";
-  margin: auto;
+  "carousel"
+  "addtocart";
   margin-bottom: 30px;
+}
+
+@media (min-width: 800px) {
+  #top{
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+    "carousel addtocart";
+    margin: auto;
+  }
+
+  #carousel {
+    justify-self: center;
+  }
+
+  #addToCart {
+    justify-self: center!important;
+  }
 }
 
 #carousel {
@@ -62,14 +83,24 @@
 
 #selectionBar{
   font-family: Montserrat,sans-serif;
+  font-size: 14px;
+  max-width: 1280px;
   grid-area: bar;
   width: 100%;
   display: grid;
-  grid-template-columns: auto repeat(8, 10%) auto;
+  grid-template-columns: auto repeat(8, 1fr) auto;
   border-bottom: 2px solid #dbdbdb;
   box-shadow: 0px 0px 0px 0px rgba(0, 0,
   0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.19);
+  margin: auto;
   margin-bottom: 20px;
+
+}
+
+@media (max-width: 1280px) {
+  #selectionBar{
+    display: none;
+  }
 }
 
 .mid {
